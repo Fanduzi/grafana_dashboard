@@ -1,0 +1,1061 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_CATALOGDB",
+      "label": "catalogdb",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "mysql",
+      "pluginName": "MySQL"
+    }
+  ],
+  "__requires": [
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "4.6.1"
+    },
+    {
+      "type": "panel",
+      "id": "graph",
+      "name": "Graph",
+      "version": ""
+    },
+    {
+      "type": "datasource",
+      "id": "mysql",
+      "name": "MySQL",
+      "version": "1.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "table",
+      "name": "Table",
+      "version": ""
+    }
+  ],
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 1,
+  "hideControls": false,
+  "id": null,
+  "links": [],
+  "rows": [
+    {
+      "collapse": false,
+      "height": 289,
+      "panels": [
+        {
+          "columns": [],
+          "datasource": "${DS_CATALOGDB}",
+          "fontSize": "80%",
+          "id": 2,
+          "links": [],
+          "minSpan": 1,
+          "pageSize": null,
+          "scroll": true,
+          "showHeader": true,
+          "sort": {
+            "col": 3,
+            "desc": true
+          },
+          "span": 12,
+          "styles": [
+            {
+              "alias": "~~~~~~~~~~bk_id~~~~~~~~~~~~~~~~~~~~",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "decimals": 2,
+              "pattern": "bk_id",
+              "preserveFormat": false,
+              "sanitize": false,
+              "thresholds": [],
+              "type": "string",
+              "unit": "short"
+            },
+            {
+              "alias": "",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "decimals": 2,
+              "pattern": "bk_server",
+              "thresholds": [],
+              "type": "string",
+              "unit": "short"
+            },
+            {
+              "alias": "~~~~~start_time~~~~~~",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "MM/DD/YY h:mm:ss a",
+              "decimals": 2,
+              "pattern": "start_time",
+              "thresholds": [],
+              "type": "date",
+              "unit": "short"
+            },
+            {
+              "alias": "~~~~~~end_time~~~~~~",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "MM/DD/YY h:mm:ss a",
+              "decimals": 2,
+              "pattern": "end_time",
+              "thresholds": [],
+              "type": "date",
+              "unit": "short"
+            },
+            {
+              "alias": "~~~~transfer_start~~~~~",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "MM/DD/YY h:mm:ss a",
+              "decimals": 2,
+              "pattern": "transfer_start",
+              "thresholds": [],
+              "type": "date",
+              "unit": "short"
+            },
+            {
+              "alias": "~~~~transfer_end~~~~~",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "MM/DD/YY h:mm:ss a",
+              "decimals": 2,
+              "pattern": "transfer_end",
+              "thresholds": [],
+              "type": "date",
+              "unit": "short"
+            },
+            {
+              "alias": "~~~~tag~~~~~",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "decimals": 2,
+              "pattern": "tag",
+              "thresholds": [],
+              "type": "string",
+              "unit": "short"
+            },
+            {
+              "alias": "~~~~backuped_db~~~~",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "decimals": 2,
+              "pattern": "backuped_db",
+              "preserveFormat": false,
+              "sanitize": false,
+              "thresholds": [],
+              "type": "string",
+              "unit": "short"
+            }
+          ],
+          "targets": [
+            {
+              "alias": "",
+              "expr": "",
+              "format": "table",
+              "intervalFactor": 2,
+              "rawSql": "SELECT\nid,\ntag,\nbk_server,\ndate_sub(start_time,interval 8 hour) start_time,\ndate_sub(end_time,interval 8 hour) end_time,\nelapsed_time/3600 elapsed_time,\nis_complete,\nbk_size,\nif(transfer_start is not null,transfer_start,'N/A') transfer_start,\nif(transfer_end is not null,transfer_end,'N/A') transfer_end,\nif(transfer_elapsed is not null,transfer_elapsed/3600,'N/A') transfer_elapsed,\nif(transfer_complete is not null,transfer_complete,'N/A') transfer_complete\nFROM catalogdb.user_backup\nORDER BY start_time ASC",
+              "refId": "A"
+            }
+          ],
+          "title": "备份信息",
+          "transform": "table",
+          "transparent": false,
+          "type": "table"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 245,
+      "panels": [
+        {
+          "alert": {
+            "conditions": [
+              {
+                "evaluator": {
+                  "params": [
+                    0.9
+                  ],
+                  "type": "lt"
+                },
+                "operator": {
+                  "type": "and"
+                },
+                "query": {
+                  "params": [
+                    "A",
+                    "1h",
+                    "now"
+                  ]
+                },
+                "reducer": {
+                  "params": [],
+                  "type": "last"
+                },
+                "type": "query"
+              },
+              {
+                "evaluator": {
+                  "params": [
+                    0.9
+                  ],
+                  "type": "gt"
+                },
+                "operator": {
+                  "type": "and"
+                },
+                "query": {
+                  "params": [
+                    "B",
+                    "1h",
+                    "now"
+                  ]
+                },
+                "reducer": {
+                  "params": [],
+                  "type": "last"
+                },
+                "type": "query"
+              },
+              {
+                "evaluator": {
+                  "params": [
+                    0.9
+                  ],
+                  "type": "gt"
+                },
+                "operator": {
+                  "type": "and"
+                },
+                "query": {
+                  "params": [
+                    "C",
+                    "1h",
+                    "now"
+                  ]
+                },
+                "reducer": {
+                  "params": [],
+                  "type": "last"
+                },
+                "type": "query"
+              },
+              {
+                "evaluator": {
+                  "params": [
+                    0.9
+                  ],
+                  "type": "gt"
+                },
+                "operator": {
+                  "type": "and"
+                },
+                "query": {
+                  "params": [
+                    "D",
+                    "1h",
+                    "now"
+                  ]
+                },
+                "reducer": {
+                  "params": [],
+                  "type": "last"
+                },
+                "type": "query"
+              },
+              {
+                "evaluator": {
+                  "params": [
+                    0.9
+                  ],
+                  "type": "gt"
+                },
+                "operator": {
+                  "type": "and"
+                },
+                "query": {
+                  "params": [
+                    "E",
+                    "1h",
+                    "now"
+                  ]
+                },
+                "reducer": {
+                  "params": [],
+                  "type": "last"
+                },
+                "type": "query"
+              }
+            ],
+            "executionErrorState": "alerting",
+            "frequency": "60s",
+            "handler": 1,
+            "message": "备份(或部分)失败,请查看catalogdb user_backup表获取具体信息",
+            "name": "备份成功监控 alert",
+            "noDataState": "no_data",
+            "notifications": [
+              {
+                "id": 1
+              }
+            ]
+          },
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_CATALOGDB}",
+          "fill": 1,
+          "hideTimeOverride": false,
+          "id": 5,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": false,
+          "linewidth": 1,
+          "links": [],
+          "minSpan": null,
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "",
+              "expr": "",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(start_time) as time_sec,\n  if(locate('N',is_complete)>0,0,1) as value,\n  if(tag!='',tag,bk_server) as metric\nFROM catalogdb.user_backup where (tag='国内平台从1' or bk_server='120.27.136.247')\nORDER BY start_time ASC\n",
+              "refId": "A"
+            },
+            {
+              "alias": "",
+              "format": "time_series",
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(start_time) as time_sec,\n  if(locate('N',is_complete)>0,0,1) as value,\n  if(tag!='',tag,bk_server) as metric\nFROM catalogdb.user_backup where (tag='国内日志主2' or bk_server='120.27.143.36')\nORDER BY start_time ASC\n",
+              "refId": "B"
+            },
+            {
+              "alias": "",
+              "format": "time_series",
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(start_time) as time_sec,\n  if(locate('N',is_complete)>0,0,1) as value,\n  if(tag!='',tag,bk_server) as metric\nFROM catalogdb.user_backup where (tag='国内sdk从1' or bk_server='120.55.74.93')\nORDER BY start_time ASC\n",
+              "refId": "C"
+            },
+            {
+              "alias": "",
+              "format": "time_series",
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(start_time) as time_sec,\n  if(locate('N',is_complete)>0,0,1) as value,\n  if(tag!='',tag,bk_server) as metric\nFROM catalogdb.user_backup where (tag='国内平台主2' or bk_server='101.37.164.13')\nORDER BY start_time ASC\n\n",
+              "refId": "D"
+            },
+            {
+              "alias": "",
+              "format": "time_series",
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(start_time) as time_sec,\n  if(locate('N',is_complete)>0,0,1) as value,\n  if(tag!='',tag,bk_server) as metric\nFROM catalogdb.user_backup where (tag='国内平台从4' or bk_server='101.37.12.16')\nORDER BY start_time ASC\n\n",
+              "refId": "E"
+            }
+          ],
+          "thresholds": [
+            {
+              "colorMode": "critical",
+              "fill": true,
+              "line": true,
+              "op": "lt",
+              "value": 0.9
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "备份成功监控",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "transparent": false,
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "alert": {
+            "conditions": [
+              {
+                "evaluator": {
+                  "params": [
+                    0.9
+                  ],
+                  "type": "lt"
+                },
+                "operator": {
+                  "type": "and"
+                },
+                "query": {
+                  "params": [
+                    "A",
+                    "1h",
+                    "now"
+                  ]
+                },
+                "reducer": {
+                  "params": [],
+                  "type": "last"
+                },
+                "type": "query"
+              },
+              {
+                "evaluator": {
+                  "params": [
+                    0.9
+                  ],
+                  "type": "gt"
+                },
+                "operator": {
+                  "type": "and"
+                },
+                "query": {
+                  "params": [
+                    "B",
+                    "1h",
+                    "now"
+                  ]
+                },
+                "reducer": {
+                  "params": [],
+                  "type": "last"
+                },
+                "type": "query"
+              },
+              {
+                "evaluator": {
+                  "params": [
+                    0.9
+                  ],
+                  "type": "gt"
+                },
+                "operator": {
+                  "type": "and"
+                },
+                "query": {
+                  "params": [
+                    "C",
+                    "1h",
+                    "now"
+                  ]
+                },
+                "reducer": {
+                  "params": [],
+                  "type": "last"
+                },
+                "type": "query"
+              },
+              {
+                "evaluator": {
+                  "params": [
+                    0.9
+                  ],
+                  "type": "gt"
+                },
+                "operator": {
+                  "type": "and"
+                },
+                "query": {
+                  "params": [
+                    "D",
+                    "1h",
+                    "now"
+                  ]
+                },
+                "reducer": {
+                  "params": [],
+                  "type": "last"
+                },
+                "type": "query"
+              },
+              {
+                "evaluator": {
+                  "params": [
+                    0.9
+                  ],
+                  "type": "gt"
+                },
+                "operator": {
+                  "type": "and"
+                },
+                "query": {
+                  "params": [
+                    "E",
+                    "1h",
+                    "now"
+                  ]
+                },
+                "reducer": {
+                  "params": [],
+                  "type": "last"
+                },
+                "type": "query"
+              }
+            ],
+            "executionErrorState": "alerting",
+            "frequency": "60s",
+            "handler": 1,
+            "message": "rsync传输失败 或本地备份没有传输",
+            "name": "rsync传输是否成功监控 alert",
+            "noDataState": "no_data",
+            "notifications": [
+              {
+                "id": 1
+              }
+            ]
+          },
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_CATALOGDB}",
+          "fill": 1,
+          "id": 6,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": false,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "",
+              "expr": "",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(transfer_start) as time_sec,\n  if(transfer_complete='Y',1,0) as value,\n  if(tag!='',tag,bk_server) as metric\nFROM catalogdb.user_backup where (tag='国内平台从1' or bk_server='120.27.136.247')\nORDER BY start_time ASC\n\n",
+              "refId": "A"
+            },
+            {
+              "alias": "",
+              "format": "time_series",
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(transfer_start) as time_sec,\n  if(transfer_complete='Y',1,0) as value,\n  if(tag!='',tag,bk_server) as metric\nFROM catalogdb.user_backup where (tag='国内日志主2' or bk_server='120.27.143.36')\nORDER BY start_time ASC\n",
+              "refId": "B"
+            },
+            {
+              "alias": "",
+              "format": "time_series",
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(start_time) as time_sec,\n  if(locate('N',is_complete)>0,0,1) as value,\n  if(tag!='',tag,bk_server) as metric\nFROM catalogdb.user_backup where (tag='国内sdk从1' or bk_server='120.55.74.93')\nORDER BY start_time ASC\n",
+              "refId": "C"
+            },
+            {
+              "alias": "",
+              "format": "time_series",
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(start_time) as time_sec,\n  if(locate('N',is_complete)>0,0,1) as value,\n  if(tag!='',tag,bk_server) as metric\nFROM catalogdb.user_backup where (tag='国内平台主2' or bk_server='101.37.164.13')\nORDER BY start_time ASC\n",
+              "refId": "D"
+            },
+            {
+              "alias": "",
+              "format": "time_series",
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(start_time) as time_sec,\n  if(locate('N',is_complete)>0,0,1) as value,\n  if(tag!='',tag,bk_server) as metric\nFROM catalogdb.user_backup where (tag='国内平台从4' or bk_server='101.37.12.16')\nORDER BY start_time ASC\n",
+              "refId": "E"
+            }
+          ],
+          "thresholds": [
+            {
+              "colorMode": "critical",
+              "fill": true,
+              "line": true,
+              "op": "lt",
+              "value": 0.9
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "rsync传输是否成功监控",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_CATALOGDB}",
+          "fill": 0,
+          "id": 4,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": false,
+          "linewidth": 2,
+          "links": [],
+          "minSpan": null,
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "",
+              "expr": "",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(transfer_start) as time_sec,\n  transfer_elapsed as value,\n  if(tag !='',concat('rsync_',tag),bk_server) as metric\nFROM catalogdb.user_backup where transfer_start is not null\nORDER BY start_time ASC\n",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "rsync时间监控",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "s",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "s",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_CATALOGDB}",
+          "fill": 0,
+          "id": 3,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": false,
+          "linewidth": 2,
+          "links": [],
+          "minSpan": null,
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "",
+              "expr": "",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(start_time) as time_sec,\n  elapsed_time as value,\n  if(tag !='',concat('备份_',tag),bk_server) as metric\nFROM catalogdb.user_backup\nORDER BY start_time ASC\n",
+              "refId": "A"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "备份时间监控",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "s",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "s",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": "250",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_CATALOGDB}",
+          "fill": 1,
+          "id": 1,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": false,
+          "linewidth": 1,
+          "links": [],
+          "minSpan": null,
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "",
+              "expr": "",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(start_time) as time_sec,\n  substr(bk_size,1,length(bk_size)-1)*if(substr(bk_size,length(bk_size),1)='K',1024,if(substr(bk_size,length(bk_size),1)='G',1073741824,1048576)) as value,\n  if(tag!='',tag,bk_server) as metric\nFROM catalogdb.user_backup where (tag='国内平台从1' or bk_server='120.27.136.247')\nORDER BY start_time ASC",
+              "refId": "A"
+            },
+            {
+              "alias": "",
+              "format": "time_series",
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(start_time) as time_sec,\n  substr(bk_size,1,length(bk_size)-1)*if(substr(bk_size,length(bk_size),1)='K',1024,if(substr(bk_size,length(bk_size),1)='G',1073741824,1048576)) as value,\n  if(tag!='',tag,bk_server) as metric\nFROM catalogdb.user_backup where (tag='国内日志主2' or bk_server='120.27.143.36')\nORDER BY start_time ASC",
+              "refId": "B"
+            },
+            {
+              "alias": "",
+              "format": "time_series",
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(start_time) as time_sec,\n  substr(bk_size,1,length(bk_size)-1)*if(substr(bk_size,length(bk_size),1)='K',1024,if(substr(bk_size,length(bk_size),1)='G',1073741824,1048576)) as value,\n  if(tag!='',tag,bk_server) as metric\nFROM catalogdb.user_backup where (tag='国内sdk从1' or bk_server='120.55.74.93')\nORDER BY start_time ASC\n",
+              "refId": "C"
+            },
+            {
+              "alias": "",
+              "format": "time_series",
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(start_time) as time_sec,\n  substr(bk_size,1,length(bk_size)-1)*if(substr(bk_size,length(bk_size),1)='K',1024,if(substr(bk_size,length(bk_size),1)='G',1073741824,1048576)) as value,\n  if(tag!='',tag,bk_server) as metric\nFROM catalogdb.user_backup where (tag='国内平台主2' or bk_server='101.37.164.13')\nORDER BY start_time ASC\n\n",
+              "refId": "D"
+            },
+            {
+              "alias": "",
+              "format": "time_series",
+              "rawSql": "SELECT\n  UNIX_TIMESTAMP(start_time) as time_sec,\n  substr(bk_size,1,length(bk_size)-1)*if(substr(bk_size,length(bk_size),1)='K',1024,if(substr(bk_size,length(bk_size),1)='G',1073741824,1048576)) as value,\n  if(tag!='',tag,bk_server) as metric\nFROM catalogdb.user_backup where (tag='国内平台从4' or bk_server='101.37.12.16')\nORDER BY start_time ASC\n\n",
+              "refId": "E"
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "备份集Size",
+          "tooltip": {
+            "shared": false,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": [
+              "total"
+            ]
+          },
+          "yaxes": [
+            {
+              "format": "bytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": "0",
+              "show": true
+            },
+            {
+              "format": "bytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": "0",
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    }
+  ],
+  "schemaVersion": 14,
+  "style": "dark",
+  "tags": [
+    "Alert"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-3d",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "",
+  "title": "备份监控",
+  "version": 20
+}
